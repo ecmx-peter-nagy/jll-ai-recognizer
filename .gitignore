@@ -29,9 +29,7 @@ logs/
 .DS_Store
 Thumbs.db
 
-### Doxis / Gemini — DO NOT COMMIT SECRETS ###
-# These files contain API keys, Okta, Subscription Key, User ID, etc.
-src/main/resources/secrets.properties    
+  
 
 
 ### Optional — avoid uploading large test PDFs ###
