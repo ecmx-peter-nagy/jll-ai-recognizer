@@ -16,7 +16,7 @@
             <AppenderRef ref="log-file" />
         </Logger>
 
-        <Logger name="com.jll.gemini" level="DEBUG" additivity="false">
+        <Logger name="com.jll.ai" level="DEBUG" additivity="false">
             <AppenderRef ref="console" />
             <AppenderRef ref="log-file" />
         </Logger>
@@ -28,7 +28,7 @@
         </Logger>
 
         <!-- Suppress noisy HTTP logs -->
-        <Logger name="com.jll.gemini.service.HttpLogger" level="WARN" additivity="false">
+        <Logger name="com.jll.ai.service.HttpLogger" level="WARN" additivity="false">
             <AppenderRef ref="console" />
             <AppenderRef ref="log-file" />
         </Logger>
