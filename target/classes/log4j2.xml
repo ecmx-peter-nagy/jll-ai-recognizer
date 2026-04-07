@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d %p %m %ex%n" />
+        </Console>
+
+        <File name="log-file" fileName="log/jll-dev-doxis-groovy-agents.log">
+            <PatternLayout pattern="%d %p %m %ex%n" />
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="com.jll.doxis" level="DEBUG" additivity="false">
+            <AppenderRef ref="console" />
+            <AppenderRef ref="log-file" />
+        </Logger>
+
+        <Logger name="com.jll.ai" level="DEBUG" additivity="false">
+            <AppenderRef ref="console" />
+            <AppenderRef ref="log-file" />
+        </Logger>
+
+        <!-- Hide noisy Sedna warning: "No hash algorithm configured for repository '...'." -->
+        <Logger name="com.ser.sedna.storage.client.SednaStorageSystemClientImpl" level="OFF" additivity="false">
+            <AppenderRef ref="console" />
+            <AppenderRef ref="log-file" />
+        </Logger>
+
+        <!-- Suppress noisy HTTP logs -->
+        <Logger name="com.jll.ai.service.HttpLogger" level="WARN" additivity="false">
+            <AppenderRef ref="console" />
+            <AppenderRef ref="log-file" />
+        </Logger>
+
+        <Root level="INFO">
+            <AppenderRef ref="console" />
+            <AppenderRef ref="log-file" />
+        </Root>
+    </Loggers>
+</Configuration>
