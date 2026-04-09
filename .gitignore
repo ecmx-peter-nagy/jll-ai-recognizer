@@ -35,3 +35,4 @@ src/main/resources/secrets.properties
 ### Optional — avoid uploading large test PDFs ###
 *.pdf
 test-data/
+*.lst
